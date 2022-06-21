@@ -33,8 +33,8 @@ namespace Programozok_new
 
         public string toHTML()
         {
-            string vissza = "<table><tr><th>" + string.Join("</th><th>", "Név", "Beosztás", "Tapasztalat", "Havi Fizetés", "HTML ismeret", "CSS ismeret", "JavaScript ismeret") + "</th></tr>";
-            vissza += "<tr><td>" + string.Join("</td><td>", this.Nev.ToString(), this.Beosztas, this.Tapasztalat, this.HaviFizetes, html, css, javaScript) + "</td></tr></table>";
+           
+          string  vissza = "<tr><td>" + string.Join("</td><td>", this.Nev.ToString(), this.Beosztas, this.Tapasztalat, this.HaviFizetes, html, css, javaScript) + "</td></tr>";
             return vissza;
         }
 

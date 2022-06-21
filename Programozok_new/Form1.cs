@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Programozok_new
 {
@@ -165,16 +166,71 @@ namespace Programozok_new
             }
             else if (prog.GetType() == typeof(Back))
             {
-                //  MessageBox.Show("Back");
+                 // MessageBox.Show("Back");
             }
             else if (prog.GetType() == typeof(Full))
             {
-                //  MessageBox.Show("Full");
+                 // MessageBox.Show("Full");
             }
             else
             {
                 MessageBox.Show("Egyik sem!");
             }
+        }
+
+        private void button_mentesHTML_Click(object sender, EventArgs e)
+        {
+            if (listBox_Programozok.Items.Count < 1)
+            {
+                return;
+            }
+            // Szétválogatju ka lista elemeit típusonként!
+            List<Front> frontend = new List<Front>();
+            List<Back> backend = new List<Back>();
+            List<Full> fulstack = new List<Full>();
+            foreach (var prog in listBox_Programozok.Items)
+            {
+                
+                if (prog.GetType() == typeof(Front))
+                {
+                    frontend.Add((Front)prog);
+                }
+                else if (prog.GetType() == typeof(Back))
+                {
+                    backend.Add((Back)prog);
+                }
+                else if (prog.GetType() == typeof(Full))
+                {
+                    fulstack.Add((Full)prog);
+                }
+                else
+                {
+                    MessageBox.Show("Nem sikerült!");
+                }
+            }//Válogatás vége!
+
+            // kiíratás most következik!
+            using (StreamWriter sw = new StreamWriter("Programozok.html"))
+            {
+                sw.WriteLine("<h3>Frontendes programozok</h3>");
+                if (frontend.Count > 0)
+                {
+                    sw.WriteLine("<table><tr><th>" + string.Join("</th><th>", "Név", "Beosztás", "Tapasztalat", "Havi Fizetés", "HTML ismeret", "CSS ismeret", "JavaScript ismeret") + "</th></tr>");
+                    foreach (Front front in frontend)
+                    {
+                        //egy - egy Frontendes programozó minden adata
+                        sw.WriteLine(front.toHTML());
+                    }
+                    sw.WriteLine("</table>");
+                    //Frontendes programozók vége!
+                }
+                else
+                {
+                    sw.WriteLine("<p>Nincs forntendes</p>");
+                }
+
+            }
+            
         }
     }
 }

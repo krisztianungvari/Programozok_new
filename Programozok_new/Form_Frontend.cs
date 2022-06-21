@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Programozok_new
 {
@@ -23,30 +24,22 @@ namespace Programozok_new
 
         private void button_toHTML_Click(object sender, EventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog();
-            if (save.ShowDialog() == DialogResult.OK)
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "adatok mentése";
+            saveFileDialog.Filter = "HTML file|*.html";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrEmpty(saveFileDialog.FileName))
             {
-                MessageBox.Show("Mentés siekres");
+                using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                {
+                    sw.WriteLine(front.toHTML());
+                }
+               
+                MessageBox.Show("Sikeres mentés!");
             }
             else
             {
-                MessageBox.Show("Mentés sikertelen");
+                MessageBox.Show("Nem történt mentés!");
             }
-
-
-            //SaveFileDialog saveFileDialog = new SaveFileDialog();
-            //saveFileDialog.Title = "adatok mentése";
-            //saveFileDialog.Filter = "HTML file|*.html";
-            ////Nem működik mert nem .NET frameworkben van!!
-            //if (Invoke((Action)(() => { saveFileDialog.ShowDialog() })) == DialogResult.OK)
-            //{
-            //    front.toHTML();
-            //    MessageBox.Show("Sikeres mentés!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Nem történt mentés!");
-            //}
         }
 
         private void button_frontHozzaadas_Click(object sender, EventArgs e)
@@ -93,6 +86,26 @@ namespace Programozok_new
                 num_frontJavascript.Value = front.JavaScript;
                 num_frontJavascript.ReadOnly = true;
                 button_frontHozzaadas.Hide();
+            }
+        }
+
+        private void button_mentesCSV_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "adatok mentése";
+            saveFileDialog.Filter = "CSV file|*.csv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrEmpty(saveFileDialog.FileName))
+            {
+                using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                {
+                    sw.WriteLine(front.tocsv());
+                }
+
+                MessageBox.Show("Sikeres mentés!");
+            }
+            else
+            {
+                MessageBox.Show("Nem történt mentés!");
             }
         }
     }

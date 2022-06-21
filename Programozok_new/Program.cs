@@ -6,18 +6,17 @@ using System.Windows.Forms;
 
 namespace Programozok_new
 {
+
     static class Program
     {
+        public static Form1 formnyito = null;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-       // [STAThread]
+        [STAThread]
        
-
-        public static Form1 formnyito = null;
         static void Main()
         {
-           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             formnyito = new Form1();
