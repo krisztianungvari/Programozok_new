@@ -56,7 +56,7 @@ namespace Programozok_new
                         int python_ismeret = dr.GetInt32("python_ismeret");
                         int java_ismeret = dr.GetInt32("java_ismeret");
 
-                        Back back = new Back(nev, beosztas, tapasztalat, 0, python_ismeret, python_ismeret, java_ismeret, dr.GetInt32("idback"), dr.GetInt32("idprog"));
+                        Back back = new Back(nev, beosztas, tapasztalat, 0, php_ismeret, python_ismeret, java_ismeret, dr.GetInt32("idback"), dr.GetInt32("idprog"));
                         listBox_Programozok.Items.Add(back);
                     }
                 }
@@ -159,18 +159,22 @@ namespace Programozok_new
             var prog = listBox_Programozok.SelectedItem;
             if (prog.GetType() == typeof(Front))
             {
-                // MessageBox.Show("Front");
+               
                 Form_Frontend front = new Form_Frontend("Show");
                 // Az ablakból létrehoztunk egy példányt
                 front.Show(); //Megjelenítjük a felhasználó számára!
             }
             else if (prog.GetType() == typeof(Back))
             {
-                 // MessageBox.Show("Back");
+               
+                Form_Backend back = new Form_Backend("Show");
+                back.Show();
             }
             else if (prog.GetType() == typeof(Full))
             {
-                 // MessageBox.Show("Full");
+                
+                Form_FullStack full = new Form_FullStack("Show");
+                full.Show();
             }
             else
             {

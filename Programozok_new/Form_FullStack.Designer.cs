@@ -30,6 +30,12 @@ namespace Programozok_new
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.num_fullstackJava = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.num_fullstackPython = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.num_fullstackPhp = new System.Windows.Forms.NumericUpDown();
             this.button_toHTML_full = new System.Windows.Forms.Button();
             this.button_fullstackHozzaadas = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,21 +50,15 @@ namespace Programozok_new
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_fullstackNev = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.num_fullstackPhp = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.num_fullstackPython = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.num_fullstackJava = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJava)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPython)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPhp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJavascript)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackCss)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackHtml)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackFizetes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackTapasztalat)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPhp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPython)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJava)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -85,10 +85,103 @@ namespace Programozok_new
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 378);
+            this.groupBox1.Size = new System.Drawing.Size(373, 413);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Új Full - Stack hozzáadás";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 258);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 13);
+            this.label9.TabIndex = 47;
+            this.label9.Text = "Java ismeret";
+            // 
+            // num_fullstackJava
+            // 
+            this.num_fullstackJava.Location = new System.Drawing.Point(209, 256);
+            this.num_fullstackJava.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_fullstackJava.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_fullstackJava.Name = "num_fullstackJava";
+            this.num_fullstackJava.Size = new System.Drawing.Size(120, 20);
+            this.num_fullstackJava.TabIndex = 46;
+            this.num_fullstackJava.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 231);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.TabIndex = 45;
+            this.label8.Text = "Python ismeret";
+            // 
+            // num_fullstackPython
+            // 
+            this.num_fullstackPython.Location = new System.Drawing.Point(209, 229);
+            this.num_fullstackPython.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_fullstackPython.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_fullstackPython.Name = "num_fullstackPython";
+            this.num_fullstackPython.Size = new System.Drawing.Size(120, 20);
+            this.num_fullstackPython.TabIndex = 44;
+            this.num_fullstackPython.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "PHP ismeret";
+            // 
+            // num_fullstackPhp
+            // 
+            this.num_fullstackPhp.Location = new System.Drawing.Point(209, 202);
+            this.num_fullstackPhp.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_fullstackPhp.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_fullstackPhp.Name = "num_fullstackPhp";
+            this.num_fullstackPhp.Size = new System.Drawing.Size(120, 20);
+            this.num_fullstackPhp.TabIndex = 42;
+            this.num_fullstackPhp.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // button_toHTML_full
             // 
@@ -98,6 +191,7 @@ namespace Programozok_new
             this.button_toHTML_full.TabIndex = 41;
             this.button_toHTML_full.Text = "Mentés HTML-be";
             this.button_toHTML_full.UseVisualStyleBackColor = true;
+            this.button_toHTML_full.Click += new System.EventHandler(this.button_toHTML_full_Click);
             // 
             // button_fullstackHozzaadas
             // 
@@ -266,117 +360,25 @@ namespace Programozok_new
             this.label1.TabIndex = 28;
             this.label1.Text = "Neve";
             // 
-            // num_fullstackPhp
-            // 
-            this.num_fullstackPhp.Location = new System.Drawing.Point(209, 202);
-            this.num_fullstackPhp.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.num_fullstackPhp.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_fullstackPhp.Name = "num_fullstackPhp";
-            this.num_fullstackPhp.Size = new System.Drawing.Size(120, 20);
-            this.num_fullstackPhp.TabIndex = 42;
-            this.num_fullstackPhp.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
-            this.label7.TabIndex = 43;
-            this.label7.Text = "PHP ismeret";
-            // 
-            // num_fullstackPython
-            // 
-            this.num_fullstackPython.Location = new System.Drawing.Point(209, 229);
-            this.num_fullstackPython.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.num_fullstackPython.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_fullstackPython.Name = "num_fullstackPython";
-            this.num_fullstackPython.Size = new System.Drawing.Size(120, 20);
-            this.num_fullstackPython.TabIndex = 44;
-            this.num_fullstackPython.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 231);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
-            this.label8.TabIndex = 45;
-            this.label8.Text = "Python ismeret";
-            // 
-            // num_fullstackJava
-            // 
-            this.num_fullstackJava.Location = new System.Drawing.Point(209, 256);
-            this.num_fullstackJava.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.num_fullstackJava.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_fullstackJava.Name = "num_fullstackJava";
-            this.num_fullstackJava.Size = new System.Drawing.Size(120, 20);
-            this.num_fullstackJava.TabIndex = 46;
-            this.num_fullstackJava.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 258);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 13);
-            this.label9.TabIndex = 47;
-            this.label9.Text = "Java ismeret";
-            // 
             // Form_FullStack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 404);
+            this.ClientSize = new System.Drawing.Size(403, 471);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_FullStack";
             this.Text = "Form_FullStack";
+            this.Load += new System.EventHandler(this.Form_FullStack_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJava)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPython)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPhp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJavascript)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackCss)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackHtml)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackFizetes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackTapasztalat)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPhp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPython)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJava)).EndInit();
             this.ResumeLayout(false);
 
         }

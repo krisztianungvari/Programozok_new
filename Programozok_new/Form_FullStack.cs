@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,9 +14,12 @@ namespace Programozok_new
 {
     public partial class Form_FullStack : Form
     {
+        string funkcio;
+        Full full;
         public Form_FullStack(string funkcio)
         {
             InitializeComponent();
+            this.funkcio = funkcio;
         }
 
         private void button_fullstackHozzaadas_Click(object sender, EventArgs e)
@@ -41,6 +45,51 @@ namespace Programozok_new
             {
 
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void Form_FullStack_Load(object sender, EventArgs e)
+        {
+            if (funkcio.Equals("Show"))
+            {
+                full = (Full)Program.formnyito.listBox_Programozok.SelectedItem;
+                textBox_fullstackNev.Text = full.Nev;
+                textBox_fullstackNev.ReadOnly = true;
+                num_fullstackTapasztalat.Value = full.Tapasztalat;
+                num_fullstackTapasztalat.ReadOnly = true;
+                num_fullstackHtml.Value = full.Html;
+                num_fullstackHtml.ReadOnly = true;
+                num_fullstackCss.Value = full.Css;
+                num_fullstackCss.ReadOnly = true;
+                num_fullstackJavascript.Value = full.JavaScript;
+                num_fullstackJavascript.ReadOnly = true;
+                num_fullstackPhp.Value = full.Php;
+                num_fullstackPhp.ReadOnly = true;
+                num_fullstackPython.Value = full.Python;
+                num_fullstackPython.ReadOnly = true;
+                num_fullstackJava.Value = full.Java;
+                num_fullstackJava.ReadOnly = true;
+                button_fullstackHozzaadas.Hide();
+            }
+        }
+
+        private void button_toHTML_full_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "adatok mentése";
+            saveFileDialog.Filter = "HTML file|*.html";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrEmpty(saveFileDialog.FileName))
+            {
+                using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                {
+                    sw.WriteLine(full.toHTML());
+                }
+
+                MessageBox.Show("Sikeres mentés!");
+            }
+            else
+            {
+                MessageBox.Show("Nem történt mentés!");
             }
         }
     }

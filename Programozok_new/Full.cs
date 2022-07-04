@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Programozok_new
 {
-    class Full : Prog,ToCSV
+    class Full : Prog, ToCSV, Interface_to_HTML
     {
         int fullid;
         int html;
@@ -39,6 +39,13 @@ namespace Programozok_new
         {
             return string.Join(";", this.Nev.ToString(), this.Beosztas, this.Tapasztalat, this.HaviFizetes, html, css, javaScript, php, python, java);
         }
+
+        public string toHTML()
+        {
+            string vissza = "<tr><td>" + string.Join("</td><td>", this.Nev.ToString(), this.Beosztas, this.Tapasztalat, this.HaviFizetes, html, css, javaScript, html, css, javaScript) + "</td></tr>";
+            return vissza;
+        }
+
         public override string ToString()
         {
             return Nev + " - " + Beosztas;

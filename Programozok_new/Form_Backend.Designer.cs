@@ -30,6 +30,12 @@ namespace Programozok_new
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.num_backFizetes = new System.Windows.Forms.NumericUpDown();
+            this.num_backTapasztalat = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_backNev = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.num_backJava = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -38,18 +44,12 @@ namespace Programozok_new
             this.num_backPhp = new System.Windows.Forms.NumericUpDown();
             this.button_toHTML_back = new System.Windows.Forms.Button();
             this.button_backHozzaadas = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.num_backFizetes = new System.Windows.Forms.NumericUpDown();
-            this.num_backTapasztalat = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox_backNev = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_backFizetes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_backTapasztalat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backJava)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backPython)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backPhp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_backFizetes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_backTapasztalat)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,10 +70,74 @@ namespace Programozok_new
             this.groupBox1.Controls.Add(this.button_backHozzaadas);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(341, 278);
+            this.groupBox1.Size = new System.Drawing.Size(341, 320);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Új Backendes";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 13);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Havi fizetés";
+            // 
+            // num_backFizetes
+            // 
+            this.num_backFizetes.Location = new System.Drawing.Point(207, 79);
+            this.num_backFizetes.Name = "num_backFizetes";
+            this.num_backFizetes.ReadOnly = true;
+            this.num_backFizetes.Size = new System.Drawing.Size(120, 20);
+            this.num_backFizetes.TabIndex = 60;
+            // 
+            // num_backTapasztalat
+            // 
+            this.num_backTapasztalat.Location = new System.Drawing.Point(207, 52);
+            this.num_backTapasztalat.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.num_backTapasztalat.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.num_backTapasztalat.Name = "num_backTapasztalat";
+            this.num_backTapasztalat.Size = new System.Drawing.Size(120, 20);
+            this.num_backTapasztalat.TabIndex = 59;
+            this.num_backTapasztalat.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Tapasztalat";
+            // 
+            // textBox_backNev
+            // 
+            this.textBox_backNev.Location = new System.Drawing.Point(207, 19);
+            this.textBox_backNev.Name = "textBox_backNev";
+            this.textBox_backNev.Size = new System.Drawing.Size(120, 20);
+            this.textBox_backNev.TabIndex = 57;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "Neve";
             // 
             // label9
             // 
@@ -176,6 +240,7 @@ namespace Programozok_new
             this.button_toHTML_back.TabIndex = 49;
             this.button_toHTML_back.Text = "Mentés HTML-be";
             this.button_toHTML_back.UseVisualStyleBackColor = true;
+            this.button_toHTML_back.Click += new System.EventHandler(this.button_toHTML_back_Click);
             // 
             // button_backHozzaadas
             // 
@@ -187,85 +252,22 @@ namespace Programozok_new
             this.button_backHozzaadas.UseVisualStyleBackColor = true;
             this.button_backHozzaadas.Click += new System.EventHandler(this.button_backHozzaadas_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Havi fizetés";
-            // 
-            // num_backFizetes
-            // 
-            this.num_backFizetes.Location = new System.Drawing.Point(207, 79);
-            this.num_backFizetes.Name = "num_backFizetes";
-            this.num_backFizetes.ReadOnly = true;
-            this.num_backFizetes.Size = new System.Drawing.Size(120, 20);
-            this.num_backFizetes.TabIndex = 60;
-            // 
-            // num_backTapasztalat
-            // 
-            this.num_backTapasztalat.Location = new System.Drawing.Point(207, 52);
-            this.num_backTapasztalat.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.num_backTapasztalat.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.num_backTapasztalat.Name = "num_backTapasztalat";
-            this.num_backTapasztalat.Size = new System.Drawing.Size(120, 20);
-            this.num_backTapasztalat.TabIndex = 59;
-            this.num_backTapasztalat.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Tapasztalat";
-            // 
-            // textBox_backNev
-            // 
-            this.textBox_backNev.Location = new System.Drawing.Point(207, 19);
-            this.textBox_backNev.Name = "textBox_backNev";
-            this.textBox_backNev.Size = new System.Drawing.Size(120, 20);
-            this.textBox_backNev.TabIndex = 57;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Neve";
-            // 
             // Form_Backend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 312);
+            this.ClientSize = new System.Drawing.Size(364, 370);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_Backend";
             this.Text = "Form_Backend";
+            this.Load += new System.EventHandler(this.Form_Backend_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_backFizetes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_backTapasztalat)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backJava)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backPython)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backPhp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_backFizetes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.num_backTapasztalat)).EndInit();
             this.ResumeLayout(false);
 
         }
