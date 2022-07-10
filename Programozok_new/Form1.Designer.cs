@@ -31,7 +31,6 @@ namespace Programozok_new
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_mentesHTML = new System.Windows.Forms.Button();
-            this.button_mentesCSV = new System.Windows.Forms.Button();
             this.button_ujFullstack = new System.Windows.Forms.Button();
             this.button_ujBackend = new System.Windows.Forms.Button();
             this.button_ujFrontend = new System.Windows.Forms.Button();
@@ -42,36 +41,26 @@ namespace Programozok_new
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button_mentesHTML);
-            this.groupBox1.Controls.Add(this.button_mentesCSV);
             this.groupBox1.Controls.Add(this.button_ujFullstack);
             this.groupBox1.Controls.Add(this.button_ujBackend);
             this.groupBox1.Controls.Add(this.button_ujFrontend);
             this.groupBox1.Controls.Add(this.listBox_Programozok);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(514, 415);
+            this.groupBox1.Size = new System.Drawing.Size(514, 380);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Programozók";
             // 
             // button_mentesHTML
             // 
-            this.button_mentesHTML.Location = new System.Drawing.Point(16, 372);
+            this.button_mentesHTML.Location = new System.Drawing.Point(16, 341);
             this.button_mentesHTML.Name = "button_mentesHTML";
             this.button_mentesHTML.Size = new System.Drawing.Size(194, 23);
             this.button_mentesHTML.TabIndex = 5;
             this.button_mentesHTML.Text = "Exportálás HTML";
             this.button_mentesHTML.UseVisualStyleBackColor = true;
             this.button_mentesHTML.Click += new System.EventHandler(this.button_mentesHTML_Click);
-            // 
-            // button_mentesCSV
-            // 
-            this.button_mentesCSV.Location = new System.Drawing.Point(16, 342);
-            this.button_mentesCSV.Name = "button_mentesCSV";
-            this.button_mentesCSV.Size = new System.Drawing.Size(194, 23);
-            this.button_mentesCSV.TabIndex = 4;
-            this.button_mentesCSV.Text = "Mentés CSV";
-            this.button_mentesCSV.UseVisualStyleBackColor = true;
             // 
             // button_ujFullstack
             // 
@@ -116,7 +105,7 @@ namespace Programozok_new
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 450);
+            this.ClientSize = new System.Drawing.Size(545, 403);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -131,7 +120,6 @@ namespace Programozok_new
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button_mentesHTML;
-        private System.Windows.Forms.Button button_mentesCSV;
         private System.Windows.Forms.Button button_ujFullstack;
         private System.Windows.Forms.Button button_ujBackend;
         private System.Windows.Forms.Button button_ujFrontend;

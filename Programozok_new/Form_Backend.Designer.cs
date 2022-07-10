@@ -44,6 +44,7 @@ namespace Programozok_new
             this.num_backPhp = new System.Windows.Forms.NumericUpDown();
             this.button_toHTML_back = new System.Windows.Forms.Button();
             this.button_backHozzaadas = new System.Windows.Forms.Button();
+            this.button_backmentesCSV = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_backFizetes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_backTapasztalat)).BeginInit();
@@ -54,6 +55,7 @@ namespace Programozok_new
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_backmentesCSV);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.num_backFizetes);
             this.groupBox1.Controls.Add(this.num_backTapasztalat);
@@ -252,6 +254,16 @@ namespace Programozok_new
             this.button_backHozzaadas.UseVisualStyleBackColor = true;
             this.button_backHozzaadas.Click += new System.EventHandler(this.button_backHozzaadas_Click);
             // 
+            // button_backmentesCSV
+            // 
+            this.button_backmentesCSV.Location = new System.Drawing.Point(9, 266);
+            this.button_backmentesCSV.Name = "button_backmentesCSV";
+            this.button_backmentesCSV.Size = new System.Drawing.Size(318, 23);
+            this.button_backmentesCSV.TabIndex = 62;
+            this.button_backmentesCSV.Text = "Mentés CSV-be";
+            this.button_backmentesCSV.UseVisualStyleBackColor = true;
+            this.button_backmentesCSV.Click += new System.EventHandler(this.button_backmentesCSV_Click);
+            // 
             // Form_Backend
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,5 +301,6 @@ namespace Programozok_new
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_backNev;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_backmentesCSV;
     }
 }

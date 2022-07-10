@@ -50,6 +50,7 @@ namespace Programozok_new
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_fullstackNev = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button_fullMentesCSV = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackJava)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_fullstackPython)).BeginInit();
@@ -63,6 +64,7 @@ namespace Programozok_new
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button_fullMentesCSV);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.num_fullstackJava);
             this.groupBox1.Controls.Add(this.label8);
@@ -360,6 +362,16 @@ namespace Programozok_new
             this.label1.TabIndex = 28;
             this.label1.Text = "Neve";
             // 
+            // button_fullMentesCSV
+            // 
+            this.button_fullMentesCSV.Location = new System.Drawing.Point(11, 361);
+            this.button_fullMentesCSV.Name = "button_fullMentesCSV";
+            this.button_fullMentesCSV.Size = new System.Drawing.Size(318, 23);
+            this.button_fullMentesCSV.TabIndex = 48;
+            this.button_fullMentesCSV.Text = "Mentés CSV-be";
+            this.button_fullMentesCSV.UseVisualStyleBackColor = true;
+            this.button_fullMentesCSV.Click += new System.EventHandler(this.button_fullMentesCSV_Click);
+            // 
             // Form_FullStack
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,5 +418,6 @@ namespace Programozok_new
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox_fullstackNev;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_fullMentesCSV;
     }
 }

@@ -92,5 +92,25 @@ namespace Programozok_new
                 MessageBox.Show("Nem történt mentés!");
             }
         }
+
+        private void button_fullMentesCSV_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "adatok mentése";
+            saveFileDialog.Filter = "CSV file|*.csv";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && !string.IsNullOrEmpty(saveFileDialog.FileName))
+            {
+                using (StreamWriter sw = new StreamWriter(saveFileDialog.FileName))
+                {
+                    sw.WriteLine(full.tocsv());
+                }
+
+                MessageBox.Show("Sikeres mentés!");
+            }
+            else
+            {
+                MessageBox.Show("Nem történt mentés!");
+            }
+        }
     }
 }

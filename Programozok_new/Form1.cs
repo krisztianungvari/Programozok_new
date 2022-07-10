@@ -147,7 +147,12 @@ namespace Programozok_new
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Biztosan ki akar lépni?", "Kérdés");
+            DialogResult result = MessageBox.Show("Biztosan ki szeretne lépni?", "Kérdés", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                // a kilépési folyamatot lehet vele megszakítni! A Form closing event-et indítottam el, és a Cancel = true ezt megszakítja.
+                e.Cancel = true;
+            }
         }
 
         private void listBox_Programozok_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -230,11 +235,50 @@ namespace Programozok_new
                 }
                 else
                 {
-                    sw.WriteLine("<p>Nincs forntendes</p>");
+                    sw.WriteLine("<p>Nincs forntendes!</p>");
                 }
 
             }
-            
+            using (StreamWriter sw = new StreamWriter("Programozok.html"))
+            {
+                sw.WriteLine("<h3>Backendes programozok</h3>");
+                if (backend.Count > 0)
+                {
+                    sw.WriteLine("<table><tr><th>" + string.Join("</th><th>", "Név", "Beosztás", "Tapasztalat", "Havi Fizetés", "Php ismeret", "Python ismeret", "Java ismeret") + "</th></tr>");
+                    foreach (Back back in backend)
+                    {
+                       
+                        sw.WriteLine(back.toHTML());
+                    }
+                    sw.WriteLine("</table>");
+                    //Backendesendes programozók vége!
+                }
+                else
+                {
+                    sw.WriteLine("<p>Nincs Backendes!</p>");
+                }
+            }
+            using (StreamWriter sw = new StreamWriter("Programozok.html"))
+            {
+                sw.WriteLine("<h3>Fullstack programozok</h3>");
+                if (fulstack.Count > 0)
+                {
+                    sw.WriteLine("<table><tr><th>" + string.Join("</th><th>", "Név", "Beosztás", "Tapasztalat", "Havi Fizetés", "HTML ismeret", "CSS ismeret", "JavaScript ismeret","Php ismeret","Python ismeret", "Java ismeret") + "</th></tr>");
+                    foreach (Full full in fulstack)
+                    {
+                        sw.WriteLine(full.toHTML());
+                    }
+                    sw.WriteLine("</table>");
+                  
+                }
+                else
+                {
+                    sw.WriteLine("<p>Nincs Fullstackes!</p>");
+                }
+
+            }
+
+
         }
     }
 }
